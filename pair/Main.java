@@ -2,10 +2,16 @@ package pair;
 
 public class Main {
     public static void main(String[] args) {
-        //Pair pair = new Pair<>("aaaa", 132423); // possible, but not recommended
+        // use our Class Pair
         Pair<String, Integer> pair = new Pair<>("aaaa", 132423);
         System.out.println(pair.getFirst());
         System.out.println(pair.getSecond());
         System.out.println(pair.toString());
+
+        // use record instead of Class
+        RecordPair<String, Integer> recordPair = new RecordPair<>("aaaa", 1232423);
+        System.out.println(recordPair.a());
+        System.out.println(recordPair.b());
+        System.out.println(recordPair.toString());
     }
 }
